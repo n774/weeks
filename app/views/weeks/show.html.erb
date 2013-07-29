@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @week.employee_id %>
+</p>
+
+<p>
+  <strong>Reported on:</strong>
+  <%= @week.reported_on %>
+</p>
+
+<p>
+  <strong>Report:</strong>
+  <%= @week.report %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @week.comment %>
+</p>
+
+<%= link_to 'Edit', edit_week_path(@week) %> |
+<%= link_to 'Back', weeks_path %>
