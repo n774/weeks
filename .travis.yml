@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.0.0
+
+notifications:
+  email: false
+
+bundler_args: --deployment
+
+script:
+  - bundle exec rake db:migrate
+  
+after_success:
+  - echo "success"
