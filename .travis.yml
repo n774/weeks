@@ -1,6 +1,7 @@
 language: ruby
+
 rvm:
-  - 2.0.0
+- 2.0.0
 
 notifications:
   email: false
@@ -8,7 +9,12 @@ notifications:
 bundler_args: --deployment
 
 script:
-  - bundle exec rake db:migrate
-  
+- bundle exec rake db:migrate
+
+env:
+  global:
+    secure: J5Wa+VFEtwK4vwzNGl5KZy1F4oSQeAqQkcpMybL0n6M4iiQsyYzoUWwOxC8C7f2jWm+D1LvzCU7PZMiVLCq6WoXKvBjs2/LACnio0WZgqmZ8MOEX86CHcdmleNsk6+Z8YX1ti5HE5E9kpDh1qb03bzv7UyhSU42D3JxG7gcMpts=
+
 after_success:
-  - echo "success"
+- echo "success"
+- ./heroku.sh
