@@ -1,5 +1,6 @@
 #!/bin/bash
 echo TRAVIS_BRANCH=${TRAVIS_BRANCH}
+
 case ${TRAVIS_BRANCH} in
     master)
   echo "it's Master!"
@@ -17,7 +18,6 @@ case ${TRAVIS_BRANCH} in
   heroku run rake db:seed
   heroku restart  
   ;;
-
     *)
   echo "it's Other."
   exit 0
