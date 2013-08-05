@@ -15,6 +15,7 @@ case ${TRAVIS_BRANCH} in
   yes | git push -f heroku master
   heroku pg:reset DATABASE --confirm weekly-reporting-system
   heroku run rake db:migrate
+  heroku run rake assets:precompile
   heroku run rake db:seed
   heroku restart  
   ;;
