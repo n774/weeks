@@ -57,7 +57,7 @@ gem 'therubyracer', :platforms => :ruby
 
 # Use BOOTSWATCH
 group :assets do
-    gem 'twitter-bootswatch-rails', '~> 2.3.1.2'
+    gem 'twitter-bootswatch-rails'
 end
-gem 'twitter-bootswatch-rails-helpers', '>= 2.3.1'
+gem 'twitter-bootswatch-rails-helpers'
 
