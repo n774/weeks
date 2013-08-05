@@ -1,6 +1,8 @@
 Weeks::Application.routes.draw do
-  resources :weeks
 
+  root :to => 'weeks#index'
+  
+  resources :weeks
   resources :employees
 
   # The priority is based upon order of creation: first created -> highest priority.
