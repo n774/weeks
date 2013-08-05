@@ -5,7 +5,7 @@ case ${TRAVIS_BRANCH} in
     master)
   echo "it's Master!"
     wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  git remote add heroku git@heroku.com:weekly-report.git
+  git remote add heroku git@heroku.com:weekly-report-system.git
   echo "Host heroku.com" >> ~/.ssh/config
   echo "   StrictHostKeyChecking no" >> ~/.ssh/config
   echo "   CheckHostIP no" >> ~/.ssh/config
@@ -13,7 +13,7 @@ case ${TRAVIS_BRANCH} in
   heroku keys:clear
   yes | heroku keys:add
   yes | git push -f heroku master
-  heroku pg:reset DATABASE --confirm weekly-report
+  heroku pg:reset DATABASE --confirm weekly-report-system
   heroku run rake db:migrate
   heroku run rake db:seed
   heroku restart  
