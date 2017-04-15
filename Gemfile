@@ -55,5 +55,9 @@ gem 'twitter-bootstrap-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platforms => :ruby 
 
-
+# Use BOOTSWATCH
+group :assets do
+    gem 'twitter-bootswatch-rails'
+end
+gem 'twitter-bootswatch-rails-helpers'
 
